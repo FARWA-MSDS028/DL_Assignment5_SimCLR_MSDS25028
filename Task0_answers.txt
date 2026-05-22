@@ -1,0 +1,14 @@
+Part 1 — Task 0: Conceptual Warm-up 
+
+Q:What does a supervised model learn from?
+Ans:It learns from labeled images, when it sees an image along with its class name (such as "cat"), it modifies its weights to anticipate that label.
+Q:Do unlabeled images still have useful structure?
+Ans:Indeed.Images have visual patterns, such as edges, textures, forms, and colors, even in the absence of labels. Even without the word "cat" appended, a "cat" image still appears to be a cat.
+Q:Should two augmented views of the same image be similar? 
+Ans:Yes, they should have comparable feature representations since they are both warped renditions of the same original.
+Q:Should different images' features be similar?
+Ans:No, characteristics from various images need to be separated in the representation space.
+Q:Why can a model trained without labels still help classification?
+Ans:Because, while never seeing labels, it picks up general visual characteristics (shapes, textures, and structures) that are helpful for a variety of activities.
+Q:Pretraining vs fine-tuning? 
+Ans:Pretraining is the process of learning good features by first training on a large job (such as SimCLR on unlabeled data). Fine-tuning is the process of using those acquired features to continue training on the particular downstream task (label-based classification).
