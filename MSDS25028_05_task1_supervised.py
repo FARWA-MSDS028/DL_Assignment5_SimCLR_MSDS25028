@@ -235,7 +235,7 @@ optimizer = torch.optim.Adam(model.parameters(), lr=3e-4)
 # CPU-friendly: use only 5 epochs
 # (full assignment needs 30+ but that would take hours on CPU)
 # For testing/development 5 epochs is enough to see it working
-NUM_EPOCHS = 5
+NUM_EPOCHS = 20
 
 print(f"\nStarting training for {NUM_EPOCHS} epochs...")
 print(f"Each epoch processes {len(train_loader)} batches of {BATCH_SIZE} images")

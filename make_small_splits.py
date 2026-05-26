@@ -3,28 +3,28 @@
 import os
 os.makedirs('splits', exist_ok=True)
 
-# Write 500 indices for unlabeled SSL training (images 0 to 499)
+# Unlabeled data for SimCLR pretraining (increased: 500 → 2000)
 with open('splits/train_ssl_unlabeled.txt', 'w') as f:
-    for i in range(500):
+    for i in range(2000):
         f.write(f"{i}\n")
 
-# Write 200 indices for labeled 10% training (images 500 to 699)
+# Labeled 10% for supervised/finetuning (increased: 200 → 500)
 with open('splits/train_labeled_10percent.txt', 'w') as f:
-    for i in range(500, 700):
+    for i in range(2000, 2500):   # starts after unlabeled so no overlap
         f.write(f"{i}\n")
 
-# Write 100 indices for validation (images 0 to 99 from test set)
+# Validation (increased: 100 → 300)
 with open('splits/val.txt', 'w') as f:
-    for i in range(100):
+    for i in range(300):
         f.write(f"{i}\n")
 
-# Write 100 indices for test (images 100 to 199 from test set)
+# Test (increased: 100 → 300, different indices from val)
 with open('splits/test.txt', 'w') as f:
-    for i in range(100, 200):
+    for i in range(300, 600):
         f.write(f"{i}\n")
 
-print("Small split files created in splits/ folder!")
-print("  train_ssl_unlabeled.txt  → 500 images")
-print("  train_labeled_10percent.txt → 200 images")
-print("  val.txt  → 100 images")
-print("  test.txt → 100 images")
+print("Split files created!")
+print(f"  train_ssl_unlabeled.txt     → 2000 images")
+print(f"  train_labeled_10percent.txt → 500 images")
+print(f"  val.txt                     → 300 images")
+print(f"  test.txt                    → 300 images")
