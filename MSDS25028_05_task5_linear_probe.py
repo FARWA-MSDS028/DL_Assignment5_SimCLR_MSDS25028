@@ -35,7 +35,6 @@ print(f"Device: {device}")
 
 # ================================================================
 # SECTION 1: Rebuild Encoder Architecture
-# (Must match exactly what was used during pretraining)
 # ================================================================
 
 class SimCLREncoder(nn.Module):
@@ -295,7 +294,7 @@ print("Saved: graphs/linear_probe_accuracy.png")
 # ================================================================
 
 print("\n" + "="*55)
-print("LINEAR PROBE RESULTS — Copy into your report:")
+print("LINEAR PROBE RESULTS :")
 print("="*55)
 print(f"{'Model':<35} {'Encoder':<25} {'Test Accuracy':>15}")
 print("-"*75)
