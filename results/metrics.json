@@ -12,9 +12,9 @@
     "random_linear_probe_test_acc": 0.182,
     "simclr_linear_probe_test_acc": 0.432,
     "simclr_finetune_test_acc": 0.404,
-    "same_view_similarity_before": 0.9902,
-    "different_image_similarity_before": 0.9858,
-    "same_view_similarity_after": 0.882,
-    "different_image_similarity_after": 0.5904,
-    "note": "Reduced dataset used due to CPU constraints"
+    "same_view_similarity_before": 0.9905,
+    "different_image_similarity_before": 0.9869,
+    "same_view_similarity_after": 0.8556,
+    "different_image_similarity_after": 0.5711,
+    "note": "Reduced dataset used due to CPU constraints. 3000 unlabeled, 800 labeled, 500 val, 500 test."
 }
